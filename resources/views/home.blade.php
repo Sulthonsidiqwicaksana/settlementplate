@@ -14,7 +14,19 @@
                         </div>
                     @endif
 
-                    {{ __('Disini Nanti Table dari database dengan parameter monitornya yaitu X,Y,Z, dan Magneto') }}
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Tinggi Sekarang (cm)</td>
+                            <td>Telah Turun (cm)</td>
+                            <td>Waktu</td>
+                        </tr>
+                            <td>{{$data->tinggi_sekarang}}</td>
+                            <td>{{$data->penurunan}}</td>
+                            <td>{{$data->created_at}}</td>
+                    </table>
+                
+                <a href="/export" class="btn btn-outline-success">Download File</a>
+                
                 </div>
             </div>
         </div>

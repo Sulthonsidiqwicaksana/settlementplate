@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Home;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //$data = Home::paginate(1);
+        //$data = Home::getTable('homes')->latest('created_at')->first();
+        $data = Home::latest('id')->first();
+        return view('home',['data'=>$data]);
     }
 }
