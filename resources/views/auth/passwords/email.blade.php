@@ -11,6 +11,7 @@
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
+                            {{ __('Check the inbox or in the spam section!') }}
                         </div>
                     @endif
 
